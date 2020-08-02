@@ -8,5 +8,5 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "kicker-importer",
-    libraryDependencies += dependencies
+    libraryDependencies := dependencies
   )
