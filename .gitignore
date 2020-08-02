@@ -19,5 +19,6 @@ project/plugins/project/
 *.class
 *.log
 
-# End of https://www.toptal.com/developers/gitignore/api/sbt,scala,intellij
+### Ignore resource file ###
+src/main/resources/source.json
 
