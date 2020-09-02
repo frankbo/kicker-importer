@@ -5,7 +5,7 @@ import java.util.UUID
 import cats.effect.IO
 import io.circe.syntax._
 import org.http4s.circe._
-import kicker.importer.FirebaseModel.{
+import kicker.importer.Model.FirebaseModel.{
   EntityWrite,
   Fields,
   GeoPointValue,
@@ -17,12 +17,12 @@ import kicker.importer.FirebaseModel.{
   StringValue,
   Update
 }
-import kicker.importer.JsonModel.Location
+import kicker.importer.Model.JsonModel.Location
 import org.http4s.{Header, Headers, Method, Request, Response}
 import org.http4s.client.Client
 import org.http4s.implicits.http4sLiteralsSyntax
 
-object Importer {
+object FirebaseImporter {
   private val Uri =
     uri"https://firestore.googleapis.com/v1/projects/kicker-app-be070/databases/(default)/documents:batchWrite"
 

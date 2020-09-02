@@ -1,13 +1,13 @@
 package kicker.importer
 
 import cats.effect.{Blocker, ContextShift, IO}
-import kicker.importer.JsonModel.Location
+import kicker.importer.Model.JsonModel.Location
 import fs2.{Stream, text, io => fio}
 import java.nio.file.Paths
 
 import io.circe.fs2.{decoder, stringArrayParser}
 
-object StreamFromFile {
+object FileStreamer {
   def apply(path: String, blocker: Blocker)(implicit
       cs: ContextShift[IO]
   ): Stream[IO, Location] =
