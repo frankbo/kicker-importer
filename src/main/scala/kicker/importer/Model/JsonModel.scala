@@ -1,15 +1,14 @@
-package kicker.importer
+package kicker.importer.Model
 
+import io.circe.generic.semiauto.{deriveDecoder, deriveEncoder}
 import io.circe.{Decoder, Encoder}
-import io.circe.generic.semiauto._
 
-object Model {
+object JsonModel {
   final case class Locations(location: List[Location])
   object Locations {
     implicit val decode: Decoder[Locations] = deriveDecoder[Locations]
     implicit val encode: Encoder[Locations] = deriveEncoder[Locations]
   }
-
   final case class Location(
       name: String,
       street: String,
