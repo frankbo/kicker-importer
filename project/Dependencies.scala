@@ -20,6 +20,10 @@ object Dependencies {
   lazy val scalaTest = Seq(
     "org.scalatest" %% "scalatest" % "3.1.1" % Test
   )
+  lazy val pureConfig = Seq(
+    "com.github.pureconfig" %% "pureconfig" % "0.13.0"
+  )
 
-  lazy val dependencies: Seq[ModuleID] = scalaTest ++ http4s ++ circe
+  lazy val dependencies: Seq[ModuleID] =
+    scalaTest ++ http4s ++ circe ++ pureConfig
 }

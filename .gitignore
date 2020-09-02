@@ -22,4 +22,6 @@ project/plugins/project/
 ### Ignore resource file ###
 src/main/resources/source.json
 src/main/resources/source-full.json
+src/main/resources/application.conf
+
 
